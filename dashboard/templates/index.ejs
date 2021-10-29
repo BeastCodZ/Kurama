@@ -1,47 +1,12 @@
 <%- include("partials/header", { bot, user, path, title: "Kurama" }) %>
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<section class="hero">
-<div class="container-sm center" style="margin-top: 110px; margin-left: 25%;">
-  <div class="d-grid gap-2 col-1 mx-auto">
-    <h1 class="hero-title">Kurama</h1>
-    <a href="/dashboard"><button class="fill">Dashboard</button></a>
-    <a href="<%= discordInvite %>"><button class="fill">Support Server</button></a>
-  </div>
-</div>
-</section>
-          <% if (user) { %>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Logged in as <%= user.username %>#<%= user.discriminator %>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/logout">Logout</a></li>
-              </ul>
-            </li>
-            </li>
-          <% } else { %>
-            <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
-          <% } %>
-<div class="loader-wrapper">
-<div class="loader">
-  <div class="eye">
-      <div class="gome">
-        <div class="gome1"></div>
-        <div class="gome2"></div>
-        <div class="gome3"></div>                                                       
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-        $(window).on("load",function(){
-          setTimeout(function () {
-          $(".loader-wrapper").fadeOut("slow");
-          }, 2000);
-        });
-    </script>
-</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+<h2 style="font-family: 'Orbitron', sans-serif;color:white;">
+  Kurama
+</h2>
+<img src="https://fontmeme.com/permalink/211029/3a04a2a6cfc389106f472a17048958cf.png" alt="naruto-font" border="0">
+
 <%- include("partials/footer") %>
