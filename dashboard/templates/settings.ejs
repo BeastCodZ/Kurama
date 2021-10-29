@@ -1,0 +1,25 @@
+<%- include("partials/header", { bot, user, path, title: `Settings | ${guild.name}` }) %>
+
+<div class="container-sm center" style="margin-top: 30px;">
+  <div class="d-grid gap-2 col-4 mx-auto">
+    <% if (alert) { %>
+      <div class="alert alert-success" role="alert">
+        <%= alert %>
+      </div>
+    <% } %>
+    <h1 style="color: 000"><%= guild.name %></h1>
+    <hr>
+    <form method="POST">
+      <p class="h5" style="color: 000;margin-bottom: 0.5rem; margin-top: 10px;">Prefix:</p>
+      <p style="font-style: italic;color: 000" class="disabled">The prefix that is added to discord messages in order to invoke commands.</p>
+      <input type="text" class="form-control" name="prefix" value="<%= settings.prefix %>" placeholder="Your prefix.">
+      <br>
+      <p class="h5" style="color: 000;margin-bottom: 0.5rem; margin-top: 10px;">Autorole id:</p>
+      <p style="font-style: italic;color: 000" class="disabled">Role id which have to be given to the new member when he/she joins.</p>
+      <input type="text" class="form-control" name="role" value="<%= settings.role %>" placeholder="AutoRole ID">
+    <br><button type="submit" class="btn btn-primary text-black" style="margin-left: 35%;">Save Settings</button>
+    </form>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
