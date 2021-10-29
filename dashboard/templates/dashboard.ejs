@@ -4,8 +4,11 @@
   <% user.guilds.forEach(guild => {
       const permsOnGuild = new perms(guild.permissions_new);
       if(!permsOnGuild.has(perms.FLAGS.MANAGE_GUILD)){
-      const permissiontext = 
-      }
+      const permissiontext = "No Permission"
+      const permissioncolor = "danger"
+      } else {
+      const permissiontext = "Edit Settings"
+      const permissioncolor = "success"
       
       
   %>
@@ -15,17 +18,17 @@
       <div class="card-body">
         <h5 style="color: #fff" class="card-title"><%= guild.name %></h5>
         <%  {%>
-          <a style="color: #fff" href="/dashboard/<%- guild.id %>" class="btn btn-success text-white">No Permission</a>
+          <a style="color: #fff" href="/dashboard/<%- guild.id %>" class="btn btn-danger text-white">No Permission</a>
         <%};%>
         <% if (bot.guilds.cache.get(guild.id)) { %>
-          <a style="color: #fff" href="/dashboard/<%- guild.id %>" class="btn btn-success text-white">Edit Settings</a>
+          <a style="color: #fff" href="/dashboard/<%- guild.id %>" class="btn btn-<%- permissioncolor %> text-white">Edit Settings</a>
         <% } else { %>
           <a href="<%= `https://discord.com/oauth2/authorize?client_id=${bot.user.id}&guild_id=${guild.id}&scope=bot&response_type=code&redirect_uri=https%3A%2F%2Fkurama.beastcodz.ml%2Fcallback`  %>" class="btn btn-primary text-white" style="color: #fff">Invite Bot</a>
         <% } %>
       </div>
     </div>
   <%
-     });
+     }});
   %>
 </div>
 
