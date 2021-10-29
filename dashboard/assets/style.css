@@ -177,8 +177,8 @@
   color:#ff6600;
 }
 .title:nth-child(2){
-  color: blue;
+  color: black;
 }
-.title:nth-child(1){
-  color: red;
+.title:nth-child(2){
+  color: blue;
 }
