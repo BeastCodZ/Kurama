@@ -174,11 +174,11 @@
   align-items: center;
 }
 .title{
-  color:#ff6600;
+  font-family: 'QUARTZO', sans-serif;
 }
-.title:nth-child(2){
-  color: black;
+.title b:nth-of-type(odd){
+  color: red;
 }
-.title:nth-child(2){
-  color: blue;
+.title b:nth-of-type(even){
+  color: orange;
 }
