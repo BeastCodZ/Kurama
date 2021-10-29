@@ -174,11 +174,18 @@
   align-items: center;
 }
 .title{
-  font-family: 'QUARTZO', sans-serif;
+font-family: 'QUARTZO', sans-serif;
+  font-size:3.5em;
 }
 .title b:nth-of-type(odd){
   color: red;
 }
 .title b:nth-of-type(even){
   color: orange;
+}
+.vcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
