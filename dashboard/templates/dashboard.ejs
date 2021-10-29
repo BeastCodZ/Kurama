@@ -2,14 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
   <% user.guilds.forEach(guild => {
-      const permsOnGuild = new perms(guild.permissions_new);
-      if(!permsOnGuild.has(perms.FLAGS.MANAGE_GUILD)){
-      const permissiontext = "No Permission"
-      const permissioncolor = "danger"
-      } else {
-      const permissiontext = "Edit Settings"
-      const permissioncolor = "success"
-      
+      const permsOnGuild = new perms(guild.permissions_new);     
       
   %>
 
@@ -17,9 +10,9 @@
     <%- guild.icon ? `<img src="https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=256" class="card-img-top" style="max-width: 18rem;">` : `<img src="https://cdn.glitch.com/a6b425a1-7199-4b5f-947f-584326c2c90e%2F4c84a797-48cf-448f-94f7-07798b5f61db.image.png?v=1632346374647" class="card-img-top" style="max-width: 18rem;">` %>
       <div class="card-body">
         <h5 style="color: #fff" class="card-title"><%= guild.name %></h5>
-        <%  {%>
+        <% { const permissoncolor = "danger"%>
           <a style="color: #fff" href="/dashboard/<%- guild.id %>" class="btn btn-danger text-white">No Permission</a>
-        <%};%>
+        <%}%>
         <% if (bot.guilds.cache.get(guild.id)) { %>
           <a style="color: #fff" href="/dashboard/<%- guild.id %>" class="btn btn-<%- permissioncolor %> text-white">Edit Settings</a>
         <% } else { %>
@@ -28,7 +21,7 @@
       </div>
     </div>
   <%
-     }});
+     });
   %>
 </div>
 
