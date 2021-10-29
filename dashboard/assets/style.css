@@ -173,3 +173,12 @@
   justify-content: center;
   align-items: center;
 }
+.title{
+  color:#ff6600;
+}
+.title:nth-child(2){
+  color: blue;
+}
+.title:nth-child(1){
+  color: red;
+}
