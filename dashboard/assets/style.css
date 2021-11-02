@@ -27,7 +27,6 @@
 	 line-height: 1;
 	 padding: 1em 2em;
    transition: 0.25s;
-   margin-left: -180px;
 }
   .hero-title {
    color: #000;
@@ -50,23 +49,15 @@
   .stats {
     color: #fff;
   }
- button:hover, button:focus {
-	 border-color: 2px solid;
-	 color: #000;
-}
- button {
-	 color: var(--color);
-	 transition: 0.25s;
-   background: #000;
-	 border: 2px solid;
-	 font: inherit;
-	 line-height: 1;
-	 margin: 0.5em;
-   margin-left: -180px;   
-	 padding: 1em 2em;
+.logo{
+  position:fixed;
+  margin-left: -50px;
+  margin-top: -20px;
 }
   }
-	@media only screen and (min-width: 32em) { .hero-title { font-size: 16vh; } }	
+	@media only screen and (min-width: 32em) { 
+  
+  .hero-title { font-size: 16vh; } }	
 .fill:hover, .fill:focus {
 	 box-shadow: inset 0 0 0 2em var(--hover);
 }
@@ -90,8 +81,8 @@
 	 box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
 }
  .fill {
-	 --color: ##0031c9;
-	 --hover: #EF233C;
+	 --color: #0031c9;
+	 --hover: #CF0107;
 }
 
 .eye{
@@ -174,14 +165,21 @@
   align-items: center;
 }
 .title{
-font-family: 'QUARTZO', sans-serif;
-  font-size:3.5em;
+  font-family: 'Quantico', sans-serif;
+  font-size:4.5em;
+  font-weight:400;
+  margin-left: -100px;
+  margin-top: -180px;
+}
+.title b:first-child{
+  font-weight:700;
+  font-size:2em;
 }
 .title b:nth-of-type(odd){
-  color: red;
+  color: #ff6600;
 }
 .title b:nth-of-type(even){
-  color: orange;
+  color: #ca0e0e;
 }
 .vcenter {
   display: flex;
@@ -190,7 +188,24 @@ font-family: 'QUARTZO', sans-serif;
   height: 100%;
 }
 .index-opt {
-  background:white;
   padding: 15px;
-  margin:2rem 4rem;
+  margin:2rem 10rem;
+}
+.w-100{
+  width:100%;
+  margin-left: 100px;
+}
+button:hover, button:focus {
+	 border-color: 2px solid;
+	 color: #000;
+}
+ button {
+	 color: #ff8b3d;
+	 transition: 0.25s;
+   background: #000;
+	 border: 2px solid;
+	 font: inherit;
+	 line-height: 1;
+	 margin: 0.5em;
+	 padding: 1em 0.5em;
 }

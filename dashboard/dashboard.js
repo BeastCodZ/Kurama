@@ -206,9 +206,12 @@ module.exports = async (client) => {
   app.get("/discord", function(req, res) {
     res.redirect("https://discord.gg/VbgPYagUvg");
   });
+  app.get("/invite", function(req, res){
+    res.redirect("https://discord.com/oauth2/authorize?client_id=741349593127845989&scope=bot&response_type=code&redirect_uri=https%3A%2F%2Fkurama.beastcodz.ml%2Fcallback")
+  })
   app.get("/ping", function(req, res) {    
     console.log("Got Pinged")
-    res.redirect("https://bustling-calm-meteorite.glitch.me/")
+    res.redirect("https://kurama-beastcodz.ml/")
   });
   // Index endpoint.
   app.get("/", (req, res) => {

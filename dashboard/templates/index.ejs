@@ -1,19 +1,22 @@
 <%- include("partials/header", { bot, user, path, title: "Kurama" }) %>
-
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="http://fonts.cdnfonts.com/css/quartzo" rel="stylesheet">
-                
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+
 <div class="container vcenter">
   <h2 class="title">
-  <b>K</b><b>u</b><b>r</b><b>a</b><b>m</b><b>a</b>
-</h2>
-  <div>
-    <div class="index-opt">
-     SETTINGS
+  <b>K</b><b>U</b><b>R</b><b>A</b><b>M</b><b>A</b>
+</h2><div>
+<div class="index-opt">
+     <a href="/dashboard"><button class="fill w-100">Dashboard</button></a>
     </div>
     <div class="index-opt">
-     DASHBOARD
+     <a href="<%= discordInvite %>"><button class="fill w-100">Discord Server</button></a>
+     <div class="index-opt">
+     <a href="/invite"><button class="fill w-100">Invite Bot</button></a>
     </div>
-  </div>
-<%- include("partials/footer") %>
+    </div></div>
+  
+  <%- include("partials/footer") %>
