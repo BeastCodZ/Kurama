@@ -9,5 +9,12 @@ let minutes = Math.floor(totalSeconds / 60);
 let seconds = Math.floor(totalSeconds % 60);
 let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
   %>
-      <p id="footer" style="font-family: 'Lucida Sans';color:white">Running since <%= uptime %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Design by foolishdeveloper.com -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <p id="footer" style="font-family: 'Lucida Sans';color:black">Running since <%= uptime %></p>
 <%- include("partials/footer") %>
