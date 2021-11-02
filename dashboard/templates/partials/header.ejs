@@ -5,14 +5,58 @@
     <title><%= title %></title>
     <link href="/nav.css" rel="stylesheet" id="css">
     <link rel="stylesheet" href="/style.css" id="css">
+    <link rel="stylesheet" href="/background.css" id="css">
+</div>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="https://media.discordapp.net/attachments/719435289478692875/891366303783346186/unknown.png" width=10% class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link #3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link #4</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <% if (user) { %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Logged in as <%= user.username %>#<%= user.discriminator %>
+              </a>
+              <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Option #2</a></li>
+                <li><a class="dropdown-item" href="#">Options #3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              </ul>
+            </li>
+            </li>
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </head>
-<body id="random">
-  <script>
-  var bigSize = ['https://cdn.glitch.me/89e8dcbe-769a-469d-9d90-204240ad88bf%2F95fafee0-d02f-4890-aaaf-df8c61c8b801.image.png?v=1635532546254']
-  var img = document.getElementById("random")
-  var random = Math.floor(Math.random() * 1) + 0;
-  img.style.backgroundImage = 'url("' + bigSize[random] + '")';
-  img.style.backgroundRepeat = "no-repeat";
-  img.style.backgroundSize = "cover";
-</script>
+<body>
 </div>

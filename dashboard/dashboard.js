@@ -224,6 +224,9 @@ module.exports = async (client) => {
   app.get("/dashboard", checkAuth, (req, res) => {
     renderTemplate(res, req, "dashboard.ejs", { perms: Permissions });
   });
+  app.get("/stats", (req, res) => {
+    renderTemplate(res, req, "stats.ejs");
+  });
   app.get("/wakeup", function(request, response) {
   console.log("i'm awake");
   response.send("i'm awake")
