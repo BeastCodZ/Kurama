@@ -5,7 +5,6 @@ module.exports = {
   description: "loop the current playing music",
   run: async (client, message, args, player) => {  
     const queue = player.getQueue(message.guild.id);
-
         if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
 
         if (args.join('').toLowerCase() === 'queue') {
