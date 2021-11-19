@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const GuildSettings = require("./models/settings");
 const Dashboard = require("./dashboard/dashboard");
 const fs = require("fs");
-const canvas = require("canvas");
 const Discord = require("discord.js")
 const { Client, Intents, Permissions, Collection } = require("discord.js");
 const { stripIndent } = require('common-tags');
