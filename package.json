@@ -35,7 +35,7 @@
     "simple-youtube-api": "^5.2.1",
     "uptime-monitor": "^4.1.0",
     "ytdl-core": "^4.9.1",
-    "node-fetch": "^3.1.0"
+    "node-fetch": "2.x"
   },
   "devDependencies": {
     "chalk": "^2.4.2",
