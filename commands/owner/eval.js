@@ -1,6 +1,6 @@
 const ownerid = ["516140725185019905"];
 const Discord = require("discord.js");
-
+const canvas = require('canvas')
 module.exports = {
     name: "eval",
     category: "owner",
