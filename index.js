@@ -1,7 +1,6 @@
 const { Player } = require('discord-player');
 const autorole = require('./models/settings');
 const { tictactoe } = require('reconlx')
-const reconlx = require('reconlx')
 const config = require("./config");
 const mongoose = require("mongoose");
 const GuildSettings = require("./models/settings");
