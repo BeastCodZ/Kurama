@@ -213,6 +213,9 @@ module.exports = async (client) => {
     console.log("Got Pinged")
     res.redirect("https://kurama-beastcodz.ml/")
   });
+  app.get("/music", function(req, res) {    
+    res.redirect("https://www.youtube.com/playlist?list=PLl_7Tun1IeuCzsidFnhotYQE2ApxCDOyH")
+  });
   // Index endpoint.
   app.get("/", (req, res) => {
   renderTemplate(res, req, "index.ejs", {
