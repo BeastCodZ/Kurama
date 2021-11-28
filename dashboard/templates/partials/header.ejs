@@ -5,7 +5,50 @@
     <title><%= title %></title>
     <link href="/nav.css" rel="stylesheet" id="css">
     <link rel="stylesheet" href="/style.css" id="css">
-    <link rel="stylesheet" href="/background.css" id="css">
 </head>
-<body>
+<body id="random">
+  <script>
+  var bigSize = ['https://cdn.discordapp.com/attachments/719435289478692875/891253914802999316/unknown.png',//kakashi
+                 'https://cdn.discordapp.com/attachments/890515129010122783/890968680677126214/by-joosherino-uzumaki-naruto-naruto-shippuden-naruto-ninja-s.png',//kidnaruto
+                 'https://cdn.discordapp.com/attachments/719435289478692875/891257411694919690/unknown.png',//6pathnaruto
+                 'https://cdn.discordapp.com/attachments/719435289478692875/891270348660699186/unknown.png',//Itachi
+                 'https://cdn.discordapp.com/attachments/719435289478692875/891258227499606027/unknown.png']//sasuke
+  var img = document.getElementById("random")
+  var random = Math.floor(Math.random() * 5) + 0;
+  img.style.backgroundImage = 'url("' + bigSize[random] + '")';
+  img.style.backgroundRepeat = "no-repeat";
+  img.style.backgroundSize = "cover";
+</script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-blues">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!li class="nav-item">
+            <!a class="nav-link" href="#"></a>
+          <!/li>
+        </ul>
+        <ul class="navbar-nav">
+          <% if (user) { %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Logged in as <%= user.username %>#<%= user.discriminator %>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              </ul>
+            </li>
+            </li>
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </div>
