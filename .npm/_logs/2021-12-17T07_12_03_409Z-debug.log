@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/rbd/pnpm-volume/89e8dcbe-769a-469d-9d90-204240ad88bf/node_modules/node/bin/node',
+1 verbose cli   '/opt/nvm/versions/node/v14/bin/npm',
+1 verbose cli   'install'
+1 verbose cli ]
+2 info using npm@6.14.15
+3 info using node@v17.2.0
+4 verbose config Skipping project config: /app/.npmrc. (matches userconfig)
+5 verbose npm-session e20ed4e645ac5406
+6 silly install runPreinstallTopLevelLifecycles
+7 silly preinstall Kurama@1.0.0
+8 info lifecycle Kurama@1.0.0~preinstall: Kurama@1.0.0
+9 silly install loadCurrentTree
+10 silly install readLocalPackageData
+11 timing stage:loadCurrentTree Completed in 4317ms
+12 silly install loadIdealTree
+13 silly install cloneCurrentTreeToIdealTree
+14 timing stage:loadIdealTree:cloneCurrentTree Completed in 65ms
+15 silly install loadShrinkwrap
+16 timing stage:loadIdealTree:loadShrinkwrap Completed in 73ms
+17 silly install loadAllDepsIntoIdealTree
+18 verbose stack Error: ENOSPC: no space left on device, write
+19 verbose cwd /app
+20 verbose Linux 4.4.0-1128-aws
+21 verbose argv "/rbd/pnpm-volume/89e8dcbe-769a-469d-9d90-204240ad88bf/node_modules/node/bin/node" "/opt/nvm/versions/node/v14/bin/npm" "install"
+22 verbose node v17.2.0
+23 verbose npm  v6.14.15
+24 error code ENOSPC
+25 error syscall write
+26 error errno -28
+27 error nospc ENOSPC: no space left on device, write
+28 error nospc There appears to be insufficient space on your system to finish.
+28 error nospc Clear up some disk space and try again.
+29 verbose exit [ -28, true ]
